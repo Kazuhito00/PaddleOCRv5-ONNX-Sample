@@ -1,4 +1,6 @@
 # PaddleOCRv5-ONNX-Sample
+<img width="65%" alt="image" src="https://github.com/user-attachments/assets/526742ab-85a7-4e1b-b45c-9d7aa832547f" />
+
 [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)のPythonでのONNX推論サンプルです。<br>
 PaddleOCR v5モデルを pyclipper、shapely 依存無しに ONNXRuntime で推論できるようにしたものです。<br>
 
