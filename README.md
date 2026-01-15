@@ -1,6 +1,6 @@
 # PaddleOCRv5-ONNX-Sample
 [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)のPythonでのONNX推論サンプルです。<br>
-PaddleOCR v5モデルをONNXRuntime を使用して推論を実行できるようにしたものです。<br>
+PaddleOCR v5モデルを pyclipper、shapely 依存無しに ONNXRuntime で推論できるようにしたものです。<br>
 
 # Model
 PaddleOCR v5の以下のモデルを使用しています:
@@ -19,6 +19,12 @@ requirements.txt を参照ください。
 * Pillow
 * numpy
 * onnxruntime (GPU使用時は onnxruntime-gpu)
+
+# Installation
+```bash
+# 依存パッケージのインストール
+pip install -r requirements.txt
+```
 
 # Demo
 デモ(シンプルなOCR)の実行方法は以下です。
@@ -74,16 +80,6 @@ python demo_draw_ocr_ja.py --image=sample.jpg
 GPU推論の利用<br>
 デフォルト：指定なし
 
-# Installation
-```bash
-# 依存パッケージのインストール
-pip install -r requirements.txt
-
-# GPU使用時は以下も実行
-pip uninstall onnxruntime
-pip install onnxruntime-gpu
-```
-
 # Architecture
 このサンプルは以下の2段階のOCRパイプラインを実装しています:
 
@@ -94,11 +90,6 @@ pip install onnxruntime-gpu
 * 検出ボックスを上から下、左から右の順にソート
 * スコアフィルタリングで低信頼度の結果を除外
 * 処理時間の測定
-
-# v3からの主な変更点
-* PaddleOCR v5モデルに対応
-* 認識モデルの精度が向上
-* 処理速度が改善
 
 # Reference
 * [PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
