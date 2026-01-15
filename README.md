@@ -96,6 +96,9 @@ GPU推論の利用<br>
 # Reference
 * [PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
 
+# Author
+高橋かずひと(https://x.com/KzhtTkhs)
+
 # License
 PaddleOCRv5-ONNX-Sample is under [Apache2.0 License](LICENSE).
 
